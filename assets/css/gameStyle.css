@@ -1,0 +1,1002 @@
+@charset "utf-8";
+
+/* GAME CSS Document */
+
+
+/***************GAME SIGN IN**************/
+
+#game_page .ui-panel-wrapper {
+	padding: 0;
+    position : absolute !important;
+    top : 0px !important;
+    right : 0;
+    bottom : -0px !important;
+    left : 0 !important;
+}
+
+
+#InfoBoxContent{
+	width: 300px;
+}
+#InfoBoxContent img{
+	width: 50%;
+	height: auto;
+}
+
+
+
+/*GAME POI POPUP*/
+#gameTreasureFoundPopup [role=main]{
+	padding-top: 5px;
+}
+#gameTreasureFoundPopup_item{
+	text-decoration: underline;
+}
+#gameTreasureFoundPopup_img{
+	text-align: center;
+	width: 200px;
+	width: 50%;
+	display: inline;
+}
+#gameTreasureFoundPopup_discount{
+	display: block;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+#gameTreasureFoundPopup_discount span{
+	text-decoration: underline;
+}
+#gameTreasureFoundPopup_pts{
+	display: block;
+	padding: 15px;
+	margin: 0;
+}
+#gameTreasureFoundPopup_pts span{
+	 color: #4e9ee3;	
+}
+
+
+
+/*FAV ICON SHENANIGANS*/
+.glyphicon:before {
+ visibility: visible;
+}
+.glyphicon.glyphicon-star-empty:checked:before {
+   content: "\e006";
+	color: rgb(172, 161, 28);
+}
+input[type=checkbox].glyphicon{
+    visibility: hidden;
+	color: #000000;
+	font-size:25px;
+    top: 10px;
+	left: 5px;
+}
+#poiFav1 input,
+#poiFav2 input,
+#poiFav3 input,
+#poiFav4 input{
+	display: none;
+}
+
+
+
+/*FAV POPUP */
+#gameFavPopup img{
+	width: 50px;
+	vertical-align:middle;
+}
+#favoritedPoi1,
+#favoritedPoi2,
+#favoritedPoi3,
+#favoritedPoi4{
+	text-align: left;
+	display: none;
+	margin-bottom: 10px;
+}
+
+
+
+/*GAME STATS*/
+#gameUserStatsPopup [role=main]{
+	text-align: left;
+}
+#gameUserStatsPopup_TokensContainer img{
+	vertical-align:middle;
+	width: 40px;
+}
+#gameUserStatsPopup_lvlContainer img{
+	width: 40px;
+/*	border: 2px solid #1f1f1f;*/
+/*    border-radius: 100px;*/
+/*    -webkit-border-radius: 100px;*/
+/*    -moz-border-radius: 100px;*/
+	position: relative;
+	left: 10px;
+	
+}
+#gameUserStatsPopup_lvlContainer span{
+	position: relative;
+	top: 4px;
+}
+#gameUserStatsPopup hr{
+	width: 300px;
+ 	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+/*GAME SHOP*/
+#gameShopPopup .ui-content.newsletterPopupMain{
+	height: 280px!important;
+/*	overflow: hidden;*/
+}
+#gameShopPopup_buyTokens img{
+	width: 40px;
+}
+#gameShopPopup_comingSoon{
+	background: rgba(234, 234, 234, 0.42);
+	height: 100px;
+	position: relative;
+	top: -84px;
+	margin: 0;
+	padding: 0;
+	
+}
+#gameShopPopup_comingSoon div{
+	
+	color: rgb(59, 59, 59);
+	text-shadow: 0 0 0;
+	position: relative;
+	top: 36px;
+	font-size: 35px;
+	-ms-transform: rotate(-17deg); /* IE 9 */
+    -webkit-transform: rotate(-17deg); /* Chrome, Safari, Opera */
+    transform: rotate(-17deg);
+}
+#gameShopPopup_Fix{
+	position: relative;
+	top: -84px;
+}
+#gameShopPopup hr{
+	width: 300px;
+ 	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#gameShop_form a{
+	text-decoration: none;
+	background: #4e4e60;
+	padding: 5px;
+	text-shadow: 0 0 0 ;
+	color: white;
+}
+#gameShopPopup input[type=text]{
+	text-align: left;
+}
+
+
+
+/*GAME HINTS POPUP*/
+.gameHintsPopupDiv > h5{
+	text-align: left;
+	font-size: 15px;
+}
+.gameHintsPopupDiv hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	display: none;
+}
+.gameHintsPopupDiv hr:nth-of-type(1){
+	
+}
+
+
+
+/*GAME POPUP*/
+#gamePubPopup_img{
+	width: 20%;
+}
+#gamePubPopup_points{
+	display: inline-block;
+	float: right;
+	margin-top: -40px;
+}
+#gamePubPopup_tokenTitle{
+/*	position: relative;*/
+	margin-top: -40px;
+	float: left;
+	display: inline-block;
+}
+#gamePubPopup_hints {
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	text-align: center;
+	color: #4e9ee3;
+}
+#gamePubPopup_setSailButton{
+	background: #4e4e60;
+	color: white;
+	border-radius: 0;
+	margin: auto;
+	width: 30%;
+}
+#gamePubPopup_setSailButton:active{
+	box-shadow:0px 0px 5px 0px #000000 !important;
+}
+
+
+
+/*GAME FIND USER BUTTON - GPS*/
+#gameUserLocationBtn{
+	margin: auto;
+	text-align: center;
+	padding: 0;
+    position : absolute !important;
+    right : 5px;
+    bottom : 50px !important;
+	height: 50px;
+	width: 200px;
+	z-index: 9999!important;
+	border-radius: 3px;
+}
+#gameUserLocationBtn img{
+	padding-top: 0px;
+	width: 45px;
+}
+
+#gameEmailFavBtn{
+	margin: auto;
+	text-align: center;
+	padding: 0;
+    position : absolute !important;
+    right : 5px;
+    bottom : 120px !important;
+	height: 50px;
+	width: 200px;
+	z-index: 9999!important;
+	border-radius: 3px;
+}
+#gameEmailFavBtn img{
+	padding-top: 0px;
+	width: 45px;
+}
+
+
+/*GAME FIND TREASURE BUTTON*/
+#gameDigForTreasureBtn{
+	margin: auto;
+	text-align: center;
+	padding: 0;
+    position : absolute !important;
+    left : 5px;
+    bottom : 50px !important;
+	height: 60px;
+	width: 200px;
+	z-index: 9999!important;
+	border-radius: 3px;
+}
+#gameDigForTreasureBtn img{
+	padding-top: 0px;
+	width: 50px;
+}
+
+
+/*QUIT GAME POPUP*/
+#quitGamePopup p:nth-child(1){
+	font-size: 20px;
+	width: 200px;
+}
+
+/*CHROME STUFF*/
+#game_ContentPage {
+	padding: 0;
+    position : absolute !important;
+    top : 0px !important;
+    right : 0;
+    bottom : -0px !important;
+    left : 0 !important;
+}
+#game_page [data-role=header]{
+background: rgba(149, 214, 26, 0) !important;
+}
+#game_page [data-role=header] img {
+	height: 35px;
+	padding: 0;
+	margin: 0;
+	border: 0 !important;
+}
+#game_page.ui-page .ui-header h1 {
+	background: rgba(17, 135, 235, 0) !important;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 3px;
+	
+}
+#game_page a[data-icon=bars],
+#game_page a[data-icon=home] {
+	border: 0 !important;
+	box-shadow: none !important;
+	background-color: transparent !important;
+}
+#game_page.ui-page .ui-header h1 a:nth-child(1) {
+	margin: 0;
+	display: block;
+	padding: 0;
+}
+.gameNav_hidden{
+	visibility: hidden;
+}
+
+
+
+/*TOP BANNER*/
+#game_page.ui-page .ui-header {
+	background: #4e4e60 !important;
+}
+#game_page.ui-page .ui-footer {
+	background: #4e4e60 !important;
+	text-shadow: none !important;
+	color: white !important;
+	font-weight: 00 !important;
+	border: 0;
+	height: 42px;
+	overflow: visible;
+}
+
+
+/*Content */
+#game_page[data-role=page] [data-role=content] {
+	background: rgba(255, 255, 255, 0);
+	padding: 0;
+
+}
+#game_page [data-role=footer] {
+	bottom: 0;
+	position: fixed!important;
+	top: auto !important;
+	width: 100%;
+}
+#game_page [data-role=footer] .footerContainer {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	width: 100%;
+	text-align: center;
+}
+#game_page [data-role=footer] .footerTaskbar1,
+#game_page [data-role=footer] .footerTaskbar2,
+#game_page [data-role=footer] .footerTaskbar3,
+#game_page [data-role=footer] .footerTaskbar4 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: 23%;
+}
+#game_page [data-role=footer] .footerTaskbar1 img,
+#game_page [data-role=footer] .footerTaskbar2 img,
+#game_page [data-role=footer] .footerTaskbar3 img,
+#game_page [data-role=footer] .footerTaskbar4 img{
+	width: 25px;
+	position: relative;
+	display: inline;
+	top: 1px;
+	z-index: 1;
+}
+#game_page [data-role=footer] .footerTaskbar1 p,
+#game_page [data-role=footer] .footerTaskbar2 p,
+#game_page [data-role=footer] .footerTaskbar3 p,
+#game_page [data-role=footer] .footerTaskbar4 p{
+	font-size: 15px;
+	color: #ffffff;
+	text-shadow: 0 !important;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: -0px;
+	z-index: 2;
+}
+#game_page [data-role=footer] a {
+	text-decoration: none;
+}
+#game_page [data-role=footer] div .footerVRuler {
+	height: 100%;
+	position: relative;
+	top: 0px;
+	/*	border-left: 1px solid #eaeaea;*/
+	border-right: 1px solid #eaeaea;
+}
+#game_page [data-role=footer] div .footerVRuler1 {
+	height: 100%;
+	position: relative;
+	top: 0px;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+}
+
+/***************GAME SIGN IN**************/
+
+
+/*whole page*/
+
+#signIn_page .ui-panel-wrapper {
+	/*    background: #eaeaea !important;*/
+	background: url(../img/gameBG.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#signIn_page[data-role=page] {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	position: relative !important;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+
+#signIn_page [data-role=header] img {
+	height: 35px;
+	padding: 0;
+	margin: 0;
+	border: 0 !important;
+}
+
+#signIn_page.ui-page .ui-header h1 {
+	margin: 0px;
+	padding: 0px;
+	padding-top: 3px;
+}
+
+#signIn_page a[data-icon=bars],
+#signIn_page a[data-icon=calendar] {
+	border: 0 !important;
+	box-shadow: none !important;
+	background-color: transparent !important;
+}
+
+#signIn_page.ui-page .ui-header h1 a:nth-child(1) {
+	margin: 0;
+	display: block;
+	padding: 0;
+}
+
+
+/*TOP BANNER*/
+
+#signIn_page.ui-page .ui-header {
+	background: rgba(196, 62, 62, 0.65);
+}
+
+#signIn_page.ui-page .ui-footer {
+	background: #4e4e60 !important;
+	text-shadow: none !important;
+	color: white !important;
+	font-weight: 00 !important;
+	border: 0;
+	height: 42px;
+	overflow: visible;
+}
+
+
+/*Content */
+
+#signIn_page[data-role=page] [data-role=content] {
+	background: rgba(255, 255, 255, 0);
+}
+
+#signIn_page [data-role=footer] {
+	bottom: 0;
+	position: fixed!important;
+	top: auto !important;
+	width: 100%;
+}
+
+#signIn_page [data-role=footer] .footerContainer {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	width: 100%;
+	text-align: center;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar1 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 43px;
+	width: 22%;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar2 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	width: 50%;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar3 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	width: 22%;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar1 img {
+	width: 25px;
+	position: relative;
+	display: inline;
+	top: 0px;
+	z-index: 1;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar1 p {
+	font-size: 15px;
+	color: #ffffff;
+	text-shadow: 0 !important;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: -5px;
+	z-index: 2;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar2 img {
+	margin-left: 5px;
+	margin-right: 5px;
+	position: relative;
+	display: inline;
+	width: 26px;
+	top: -27px;
+}
+
+#signIn_page [data-role=footer] div .footerVerticalRuler {
+	height: 35px;
+	position: relative;
+	top: 0px;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar3 img {
+	width: 25px;
+	position: relative;
+	display: inline;
+	top: -0px;
+	z-index: 1;
+}
+
+#signIn_page [data-role=footer] .footerTaskbar3 p {
+	font-size: 14px;
+	color: #ffffff;
+	text-shadow: 0 !important;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: -5px;
+	bottom: 0;
+	z-index: 2;
+}
+
+#signIn_page [data-role=footer] a {
+	text-decoration: none;
+}
+
+#signIn_page.stickyFooterFix {
+	padding: 0;
+	margin: 0;
+	height: 60px;
+}
+
+.signInContainer {
+	margin: auto;
+	width: auto;
+	height: 600px;
+	background: url(../img/mapBG.png) no-repeat center;
+	background-size: contain;
+	/*	opacity: 0.8;*/
+}
+
+
+/*IPAD MEDIA QUERY PORTRAIT*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#signIn_page .signInContainer {
+	margin: auto;
+	width: auto;
+	height: 600px;
+	background: url(../img/mapBG.png) no-repeat center;
+	background-size: contain;
+		margin-top: 150px;
+	/*	opacity: 0.8;*/
+	}
+	
+	#signUp_page .ui-content {
+	margin-top: 150px!important;
+	}
+}
+
+
+#signIn_page .innerContent {
+	text-align: center;
+	position: relative;
+	top: 10%;
+	margin: auto;
+	text-align: center;
+	width: 600px;
+}
+
+
+#signIn_page form{
+	text-align: center !important;
+	margin: auto!important;
+	margin-bottom:50px!important;
+	width: 50%;
+}
+
+
+#signIn_page .gameFormLogo {
+	margin: auto;
+	display: block;
+	width: 70%;
+	margin-bottom: 20px;
+}
+#signIn_page #gameButton,
+#signUpButton {
+	padding: 0 !important;
+	padding-top:8px !important;
+	margin: 0 !important;
+	margin: auto!important;
+	margin-top: 20px !important;
+	width: 100px !important;
+	height: 37px;
+	border: 0!important;
+	border-radius: 0!important;
+	background: #4e4e60 !important;
+	color: white!important;
+	text-shadow: 0 0px 0 #000 !important;
+}
+
+/***************GAME SIGN UP**************/
+
+
+#signUp_page .signUpContainer {
+	text-align: center!important;
+	margin: auto!important;
+	width: auto;
+	height: 600px;
+	background: url(../img/mapBG.png) no-repeat center;
+	background-size: contain;
+	
+	/*	opacity: 0.8;*/
+}
+
+#signUp_page .gameFormLogo {
+	margin: auto;
+	display: block;
+	width: 400px;
+	margin-bottom: 30px;
+	position: relative;
+	top: 60px;
+}
+
+#signUp_page .innerContent form{
+	margin: auto!important;
+	text-align: center!important;
+	width: 370px;
+	position: relative;
+	top: 35px!important;
+	right: -45px
+}
+
+.ui-field-contain{
+	margin: auto!important;
+	text-align: center!important;
+}
+
+#signUp_page .innerContent .ui-input-text {
+	margin: auto!important;
+	text-align: center!important;
+	margin-bottom: 30px;
+/*	width:70% !important;*/
+/*	height:50% !important;*/
+}
+
+
+#signUp_page .innerContent .ui-checkbox {
+	margin: auto!important;
+/*	width:80% !important;*/
+	height:50% !important;
+	
+}
+#signUp_page .innerContent .ui-checkbox label{
+	background-color:transparent !important;
+	border:none !important;
+	
+}
+
+
+#signUpGameButton{
+	margin: auto;
+	color: white;
+	background: #4e4e60;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	margin-top: 60px;
+	padding: 0;
+	padding-top: 3px;
+}
+
+#signUp_page #gameButton{
+	padding: 0 !important;
+	padding-top:8px !important;
+	margin: 0 !important;
+	margin: auto!important;
+	width: 100px !important;
+	height: 30px;
+	border: 0!important;
+	border-radius: 0!important;
+	background: #4e4e60 !important;
+	color: white!important;
+	text-shadow: 0 0px 0 #000 !important;
+}
+#signUp_page .ui-panel-wrapper {
+	/*    background: #eaeaea !important;*/
+	background: url(../img/gameBG.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#signUp_page[data-role=page] {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	position: relative !important;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+
+#signUp_page [data-role=header] img {
+	height: 35px;
+	padding: 0;
+	margin: 0;
+	border: 0 !important;
+}
+
+#signUp_page.ui-page .ui-header h1 {
+	margin: 0px;
+	padding: 0px;
+	padding-top: 3px;
+}
+
+#signUp_page a[data-icon=bars],
+#signUp_page a[data-icon=calendar] {
+	border: 0 !important;
+	box-shadow: none !important;
+	background-color: transparent !important;
+}
+
+#signUp_page.ui-page .ui-header h1 a:nth-child(1) {
+	margin: 0;
+	display: block;
+	padding: 0;
+}
+
+
+/*TOP BANNER*/
+
+#signUp_page.ui-page .ui-header {
+	background: rgba(196, 62, 62, 0.65);
+}
+
+#signUp_page.ui-page .ui-footer {
+	background: #4e4e60 !important;
+	text-shadow: none !important;
+	color: white !important;
+	font-weight: 00 !important;
+	border: 0;
+	height: 42px;
+	overflow: visible;
+}
+
+
+/*Content */
+
+#signUp_page[data-role=page] [data-role=content] {
+	background: rgba(255, 255, 255, 0);
+}
+
+#signUp_page [data-role=footer] {
+	bottom: 0;
+	position: fixed!important;
+	top: auto !important;
+	width: 100%;
+}
+
+#signUp_page [data-role=footer] .footerContainer {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	width: 100%;
+	text-align: center;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar1 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 43px;
+	width: 22%;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar2 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	width: 50%;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar3 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	width: 22%;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar1 img {
+	width: 25px;
+	position: relative;
+	display: inline;
+	top: 0px;
+	z-index: 1;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar1 p {
+	font-size: 15px;
+	color: #ffffff;
+	text-shadow: 0 !important;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: -5px;
+	z-index: 2;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar2 img {
+	margin-left: 5px;
+	margin-right: 5px;
+	position: relative;
+	display: inline;
+	width: 26px;
+	top: -27px;
+}
+
+#signUp_page [data-role=footer] div .footerVerticalRuler {
+	height: 35px;
+	position: relative;
+	top: 0px;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar3 img {
+	width: 25px;
+	position: relative;
+	display: inline;
+	top: -0px;
+	z-index: 1;
+}
+
+#signUp_page [data-role=footer] .footerTaskbar3 p {
+	font-size: 14px;
+	color: #ffffff;
+	text-shadow: 0 !important;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: -5px;
+	bottom: 0;
+	z-index: 2;
+}
+
+#signUp_page [data-role=footer] a {
+	text-decoration: none;
+}
+
+#signUp_page.stickyFooterFix {
+	padding: 0;
+	margin: 0;
+	height: 60px;
+}
+
+
+
+/***************GAME NAV**************/
+
+#gameNavPanel[data-role=panel] {
+	background: #32323c !important;
+	text-align: left;
+}
+
+#gameNavPanel[data-role=panel] li a {
+	margin: 0 !important;
+	padding-left: 5px;
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+	font-size: 20px;
+	background: #32323c !important;
+	border: 0 !important;
+}
+
+#gameNavPanel[data-role=panel] .panelItemHome {
+	padding: 0 !important;
+	margin: 0 !important;
+	display: inline-block;
+}
+
+#gameNavPanel[data-role=panel] .panelItemHome p {
+	padding: 0 !important;
+	margin: 15px !important;
+	margin-left: 60px !important;
+	display: block !important;
+	text-align: left;
+	/*    font-weight: 600 !important;*/
+	font-size: 30px;
+}
+
+#gameNavPanel[data-role=panel] img {
+	display: block !important;
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 50px;
+	z-index: 10;
+}
+
+#gameNavPanel[data-role=panel] ul hr {
+	margin: 0;
+	width: 50%;
+}
+
+#gameNavPanel[data-role=panel] ul hr:first-of-type {
+	width: 100%;
+	border: 3px solid #ffffff;
+	z-index: 10;
+}

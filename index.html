@@ -1,0 +1,1788 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+	<title>Pirate Brews</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--css-->
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/gameStyle.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/contactPage.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bookingPage.css" rel="stylesheet" type="text/css">
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzWKpYofh0Ffcev-q_aQtL3LFE_AvpOnY&libraries=geometry"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!--jquery UI-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+
+	<!--jqueryMobile-->
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!--Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<!--Carousel Pluggin-->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.css">
+
+	<!--html5 and css support for old IE-->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!--jqueryFunctionality-->
+
+</head>
+
+<body>
+	<div data-role="page" class="ui-responsive-panel" id="home_page">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href="#home_page"><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#navPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a> <a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a> </div>
+		<!--HEADER END -->
+
+		<div data-role="content">
+			<div id="homePageCarousel" class="owl-carousel owl-theme">
+				<div class="item"><img src="assets/img/bar-401546_1280.jpg"></div>
+				<div class="item"><img src="assets/img/bar-872161_1280.jpg"></div>
+				<div class="item"><img src="assets/img/bar-923632_1280.jpg"></div>
+			</div>
+			<div id="searchDiv">
+				<div id="users">
+					<input class="search" placeholder="Search our Pubs" id="home_SearchBar" />
+					<div class="home_SearchContent">
+						<div class="home_searchSort">
+							<div class="home_searchHeading1">
+								<h3>Sort:</h3>
+							</div>
+							<button class="sort" data-sort="name">Name</button>
+							<button class="sort" data-sort="postcode">Post Code</button>
+						</div>
+						<div class="home_searchFilter">
+							<div class="home_searchHeading2">
+								<h3>Filter:</h3>
+							</div>
+							<button class="filter-3 sort"> <img class="wifiIcon" alt="Wifi" src="assets/ico/wi-fi.png"> </button>
+							<button class="filter-2 sort"> <img class="parkingIcon" alt="Parking" src="assets/ico/parked-car.png"> </button>
+							<button class="filter-4 sort"> <img class="tvIcon" alt="TV" src="assets/ico/television.png"> </button>
+							<button class="filter-1 sort"> <img class="tvIcon" alt="Clear" src="assets/ico/cancel.png"> </button>
+						</div>
+						<ul class="list">
+							<li data-id="1"> <a href="#pub_page" id="pubCavendish" class="link name">Old Cavendish</a>
+								<p class="address">115 New Cavendish Street</p>
+								<p class="postcode">W1W 6UW</p>
+								<p class="city">London</p>
+								<div class="home_featureContainer"> <img class="wifiIcon" src="assets/ico/wi-fi.png">
+									<p class="feature1">Wifi</p>
+									<img class="parkingIcon" src="assets/ico/parked-car.png">
+									<p class="feature2">Parking</p>
+									<img class="tvIcon" src="assets/ico/television.png">
+									<p class="feature3">Live TV</p>
+								</div>
+							</li>
+							<li data-id="2"> <a href="#pub_page" id="pubMarylebone" class="link name">Marylebone</a>
+								<p class="address">35 Marylebone Road</p>
+								<p class="postcode">NW1 5LS</p>
+								<p class="city">London</p>
+								<div class="home_featureContainer"> <img class="wifiIcon" src="assets/ico/wi-fi.png">
+									<p class="feature1">Wifi</p>
+									<img class="tvIcon" src="assets/ico/television.png">
+									<p class="feature3">Live TV</p>
+								</div>
+							</li>
+							<li data-id="3"> <a href="#pub_page" id="pubTichfield" class="link name">Little Titchfield</a>
+								<p class="address">4-12 Little Titchfield Street</p>
+								<p class="postcode">W1W 7BY</p>
+								<p class="city">London</p>
+								<div class="home_featureContainer"> <img class="parkingIcon" src="assets/ico/parked-car.png">
+									<p class="feature2">Parking</p>
+								</div>
+							</li>
+							<li data-id="4"> <a href="#pub_page" id="pubRegent" class="link name">The Prince Regent</a>
+								<p class="address">309 Regent Street</p>
+								<p class="postcode">W1B 2HW</p>
+								<p class="city">London</p>
+								<div class="home_featureContainer"> <img class="tvIcon" src="assets/ico/television.png">
+									<p class="feature3">Live TV</p>
+								</div>
+							</li>
+						</ul>
+						<button id="closeSearchButton" class="close home_DismissSearch">Close</button>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				//if the user clicks outside the serch div 
+				$(function () {
+					$("body").click(function (e) {
+						if (e.target.id == "searchDiv" || $(e.target).parents("#searchDiv").size() || e.target.id == "home_SearchBar" || $(e.target).parents("#home_SearchBar").size()) {
+							// alert("Inside div");
+						} else {
+							try {
+								document.getElementById("closeSearchButton").click();
+							} catch (err) {
+								console.log(err);
+							}
+						}
+					});
+				})
+
+
+				function hideShow(obj) {
+					var el = document.getElementById(obj);
+					try {
+						if (el.style.display != 'none')
+							el.style.display = 'none';
+						else {
+							el.style.display = '';
+						}
+					} catch (err) {}
+				}
+			</script>
+
+			<hr >
+			<div id="home_imagesContent">
+				<div class="gridItem1"> <img src="assets/img/small_img1.jpg">
+					<p id="homePar1">All hands ahoy matey we be selling brews since 1688, Pirate Brews is one of London's finest themed pubs, with over 100 bottled beers from around the world, and of course our world famous Pirate Brew Rum drink. The food menu is packed with flavours that are sure to shiver ye timbers.</p>
+				</div>
+				<div  class="gridItem2"> <img src="assets/img/small_img2.jpg">
+					<p id="homePar2">Walk the plank and dive into a uniquely themed pub, revered for its eclectic range of pirate themed ales and its quality pirate themed pub food, which are served, as they should be, with a generous measure of famous Landlubber’s hospitality. Rediscover your inner pirate with pubs themed around the famous Golden Age of Piracy.</p>
+				</div>
+				<div class="gridItem3"> <img src="assets/img/small_img3.jpg">
+					<p id="homePar3">Fresh, seasonal ingredients are used on the Pirate Brews on menu to create traditional tastes of the Seas. To start, there are Slow-Cooked Beef, Amber Ale & Mushroom Pie that is Encased in shortcrust pastry with a puff pastry lid, served with mashed potato, seasonal greens and honey-roasted carrots.</p>
+				</div>
+
+				<div style="text-align:justify;">
+					<p id="homePar4">Pirate Brews, founded by Privateer Handsome Jack, Faced with the black spot from some of his ruthless rival pirate Jamaal Beard Jones, Jack decided the pirates life ain't for he as he had to much to live for. Thus he changed his name to Sir Handsome Jack and sold his ship. Using all the riches he had claimed from his pirating days Jack and his crew opened the first Pirate Brews in hopes to find a more peaceful life and to give pirate folk alike a place they can call home. Unfortunately for Jack his pirating days caught up to him and a mere year later of opening the pub Jack was killed by a bounty hunter named Jango Beard The Fett. Luckily one of his crewmate Scallywag took up the challenge to carry on Jack's legacy.</p>
+				</div>
+			</div>
+			<!--This div fixes footer overlaping content -->
+			<div class="stickyFooterFix"></div>
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="playGame" src="assets/ico/playGame.png">
+						<p>Play!</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<a href="https://www.facebook.com/piratebrews/"> <img src="assets/ico/facebook_Icon.png"> </a>
+					<a href="https://www.instagram.com/piratebrews/?hl=en"> <img src="assets/ico/instagram_Icon.png"> </a>
+					<a href="https://twitter.com/piratebrews"> <img src="assets/ico/twitter_Icon.png"> </a>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#newsletterPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/newsletter300px.png">
+						<p>Newsletter</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--HOME PAGE - Gabriel Periotto-->
+
+	<div data-role="page" class="ui-responsive-panel" id="pub_page">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href="#home_page"><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#navPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a> <a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a> </div>
+		<!--HEADER END -->
+
+		<div data-role="content">
+
+			<!--page Title-->
+			<div class="pageTitle">
+				<span style="font-size: 40px; background-color: #eaeaea; padding: 0 10px;"> Our Pubs </span> 
+			</div>
+			<h2>Learn more about our pubs!</h2>
+			<div class="pub_topOptions">
+				<div class="pubSelectionList"> 
+					<a href="#" id="viewPub1" class="link name"> Old Cavendish <br>
+        				<span>115 New Cavendish Street, W1W 6UW</span> 
+					</a> 
+				</div>
+				<div class="pubSelectionList"> 
+					<a href="#" id="viewPub2" class="link name"> Marylebone <br>
+        				<span>35 Marylebone Road, NW1 5LS</span> 
+					</a>
+				</div>
+				<div class="pubSelectionList"> 
+					<a href="#" id="viewPub3" class="link name"> Little Titchfield <br>
+						<span>4-12 Little Titchfield Street, W1W 7BY</span>
+					</a> 
+				</div>
+				<div class="pubSelectionList"> 
+					<a href="#" id="viewPub4" class="link name"> The Prince Regent <br>
+						<span>309 Regent Street, W1B 2HW</span> 
+					</a> 
+				</div>
+			</div>
+
+			<!--This div gets populated with pub details-->
+			<div class="pubs"></div>
+
+			
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="playGame" src="assets/ico/playGame.png">
+						<p>Play!</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<a href="https://www.facebook.com/piratebrews/"> <img src="assets/ico/facebook_Icon.png"> </a>
+					<a href="https://www.instagram.com/piratebrews/?hl=en"> <img src="assets/ico/instagram_Icon.png"> </a>
+					<a href="https://twitter.com/piratebrews"> <img src="assets/ico/twitter_Icon.png"> </a>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#newsletterPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/newsletter300px.png">
+						<p>Newsletter</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--PUB PAGE - Gabriel Periotto-->
+
+	<div data-role="page" class="ui-responsive-panel" id="about_page">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href="#home_page"><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#navPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a> <a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a> </div>
+		<!--HEADER END -->
+		<div data-role="content">
+			<div>
+				<div class="pageTitle">
+					<span style="font-size: 40px; background-color: #eaeaea; padding: 0 10px;">
+						About Us
+					</span> 
+				</div>
+				<div id="about">
+					<p>Arrg matey we be selling brews since 1688, Pirate Brews is one of London's finest pubs, with over 100 bottled beers from around the world, and of course our world famous Pirate Brew Rum drink. The food menu is packed with flavours that are sure to shiver your timbers.</p>
+					<img src="assets/img/dublin-375419_1280.jpg" width="60%" height="30%" alt="" longdesc="assets/img/dublin-375419_1280.jpg" align="right">
+					<p> Fresh, seasonal ingredients are used on the Pirate Brews on menu to create traditional tastes of the Seas. To start, there are Slow-Cooked Beef, Amber Ale & Mushroom Pie that is Encased in shortcrust pastry with a puff pastry lid, served with mashed potato, seasonal greens and honey-roasted carrots. Fresh seafood mains include Sustainably Line-Caught Cod Fillets, Wholetail Scampi, there are vegetarian delicacies like Glazed Shallot Tart Tatin that is Topped with honeyed goat’s cheese pearls and Braeburn apple salad.</p>
+					<p>The beer selection at Pirate Brews is famous, with everything from pale ales to porters served on tap. The 100+ bottled selection is regularly updated, and for wine lovers there are over 50 New and Old World vintages served.</p>
+				</div>
+				
+				<hr style="width:100%;background:#000;color:#000;">
+				
+				<div id="managers">
+					<h4> Here are some of the fantastic people that run our company.</h4>
+					<div>
+						<img src="assets/img/matt-bloom-circle.png" width="30%" height="20%" alt="" longdesc="assets/img/matt-bloom-circle.png" align="middle">
+						<p>This is Jeff a hard working kind hearted individual who oversees the Old Cavendish branch and everything it does. He strives for excellence and will not tolerate imperfection. Be assured the branch is in good hands. </p>
+					</div>
+					<div>
+						<img src="assets/img/download.png" width="30%" height="20%" alt="" longdesc="assets/img/download.png">
+						<p> This is Emily a highly motivated professional with a vast experience in all the facets of F&B and luxury hospitality. Extremely customer focused with an innate leadership attitude. An excellent choice for our most popular branch Marylebone.</p>
+					</div>
+					<hr>
+					<div>
+						<img src="assets/img/Robert-Circle-Profile-Pic.png" width="30%" height="20%" alt="" longdesc="assets/img/Robert-Circle-Profile-Pic.png">
+						<p> This is Benjamin, with over 20 years of experience, he is motivated senior manager delivering solutions across the hospitality industry. In charge of the Little Titchfield branch, one of our smaller pubs, customers can come and enjoy a nice and cozy experience lead by one of our most dedicated managers.</p>
+					</div>	
+					<div>
+						<img src="assets/img/tumblr_static_profile-circle.png" width="30%" height="20%" alt="" longdesc="assets/img/tumblr_static_profile-circle.png">
+						<p> This is Abraham, with hands-on experience in handling food, beverages, operations, vendor relations, profit and loss management and guest relation operation. Manger at our The Prince Regent branch. Customers can enjoy a rich experience led by one of our most passionate managers.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="playGame" src="assets/ico/playGame.png">
+						<p>Play!</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<a href="https://www.facebook.com/piratebrews/"> <img src="assets/ico/facebook_Icon.png"> </a>
+					<a href="https://www.instagram.com/piratebrews/?hl=en"> <img src="assets/ico/instagram_Icon.png"> </a>
+					<a href="https://twitter.com/piratebrews"> <img src="assets/ico/twitter_Icon.png"> </a>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#newsletterPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/newsletter300px.png">
+						<p>Newsletter</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--ABOUT PAGE - Siddharth Vaswani-->
+
+	<div data-role="page" class="ui-responsive-panel" id="menu_page">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href="#home_page"><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#navPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a> <a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a> </div>
+		<!--HEADER END -->
+
+		<div data-role="content">
+			<div>
+				<ul class="tab">
+					<li>
+						<a href="javascript:void(0)" class="tablinks" onclick="openMenu(event, 'Drinks')" id="defaultOpen"><img id="pint" src="assets/ico/pint.png"></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="tablinks" onclick="openMenu(event, 'Main')"><img id="fast-food" src="assets/ico/fast-food.png"></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="tablinks" onclick="openMenu(event, 'Dessert')"><img id="ice-cream" src="assets/ico/ice-cream.png"></a>
+					</li>
+				</ul>
+				<div id="Drinks" class="tabcontent">
+					<br />
+					<p> Our wines are sourced from the best wine growing regions throughout the globe. We serve our wine in measurements of 175ml and by the Bottle. </p>
+					<table>
+						<tr>
+							<th>
+								<h4>White Wines</h4>
+							</th>
+							<th>170ml</th>
+							<th>Bottle</th>
+						</tr>
+						<tr>
+							<td>Catarrato, Italy </td>
+							<td>£7.50</td>
+							<td>£37.00</td>
+						</tr>
+						<tr>
+							<td>Sauvignon Blanc, Spain</td>
+							<td>£10.75</td>
+							<td>£50.00</td>
+						</tr>
+						<tr>
+							<td>Chardonnay, Spain</td>
+							<td>£9.50</td>
+							<td>£45.00</td>
+						</tr>
+						<tr>
+							<td>Pinot Gris, France</td>
+							<td>£5.75</td>
+							<td>£30.00</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<th>
+								<h4>Red Wine</h4>
+							</th>
+							<th>170ml</th>
+							<th>Bottle</th>
+						</tr>
+						<tr>
+							<td>Bordeaux Superieur, Italy </td>
+							<td>£8.50</td>
+							<td>£47.00</td>
+						</tr>
+						<tr>
+							<td>Pinot Nero Mezcan,Italy</td>
+							<td>£12.75</td>
+							<td>£60.00</td>
+						</tr>
+						<tr>
+							<td>Château Cissac, Spain</td>
+							<td>£9.50</td>
+							<td>£45.00</td>
+						</tr>
+						<tr>
+							<td>Malbec, Cahors</td>
+							<td>£6.75</td>
+							<td>£37.00</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<th>
+								<h4>Beers on Tap</h4>
+							</th>
+							<th>Half</th>
+							<th>Pint</th>
+						</tr>
+						<tr>
+							<td>Perpetual IPA </td>
+							<td>£3.50</td>
+							<td>£7.00</td>
+						</tr>
+						<tr>
+							<td>Troegenator Double Bock</td>
+							<td>£4.50</td>
+							<td>£9.00</td>
+						</tr>
+						<tr>
+							<td>HopBack Amber Ale</td>
+							<td>£2.50</td>
+							<td>£5.00</td>
+						</tr>
+						<tr>
+							<td>DreamWeaver Wheat</td>
+							<td>£4.55</td>
+							<td>£9.10</td>
+						</tr>
+					</table>
+					</table>
+					<table>
+						<tr>
+							<th>
+								<h4>Soft Drinks</h4>
+							</th>
+							<th>Small</th>
+							<th>Large</th>
+						</tr>
+						<tr>
+							<td>Appletiser </td>
+							<td>-</td>
+							<td>£5.40</td>
+						</tr>
+						<tr>
+							<td>Fruit Juice</td>
+							<td>£3.50</td>
+							<td>£7.00</td>
+						</tr>
+						<tr>
+							<td>Sparking/Still water</td>
+							<td>-</td>
+							<td>£6.40</td>
+						</tr>
+						<tr>
+							<td>Coke/Diet Coke</td>
+							<td>£3.55</td>
+							<td>£7.10</td>
+						</tr>
+					</table>
+					<br />
+					<br />
+				</div>
+				<div id="Main" class="tabcontent">
+					<br />
+					<p> If you have a food allergy or intolerance, please let us know before ordering. Full allergen information for food and drink is available, upon request. .
+
+						<p>
+
+							<table>
+								<tr>
+									<th>
+										<h4>Fish</h4>
+									</th>
+									<th>Price</th>
+								</tr>
+								<tr>
+									<td>
+										<h5>SUSTAINABLY LINE-CAUGHT COD FILLET</h5>
+										<div id=food>Hand-battered in our own Nicholson’s Pale Ale and served with triple-cooked chips, samphire tartare sauce and minted mushy peas. </div>
+									</td>
+									<td>£23.40</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>WHOLETAIL SCAMPI</h5>
+										<div id=food>Served with triple-cooked chips and samphire tartare sauce. </div>
+									</td>
+									<td>£27.20</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>GRILLED SEA BASS</h5>
+										<div id=food>Served on crushed baby potatoes and fennel relish, with tarragon-infused hollandaise sauce. </div>
+									</td>
+									<td>£22.50</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>SMOKED SALMON FISHCAKES</h5>
+										<div id=food>Served with preserved lemon aioli and your choice of triple-cooked chips or salad. </div>
+									</td>
+									<td>£25.75</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<th>
+										<h4>Meat</h4>
+									</th>
+									<th>Price</th>
+								</tr>
+								<tr>
+									<td>
+										<h5>SLOW-COOKED BEEF, AMBER ALE & MUSHROOM PIE</h5>
+										<div id=food>Encased in shortcrust pastry with a puff pastry lid, served with mashed potato, seasonal greens and honey-roasted carrots. </div>
+									</td>
+									<td>£21.40</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>GLOUCESTER OLD SPOT SAUSAGES</h5>
+										<div id=food>Served on a bed of mashed potato and topped with hand-battered onion rings and gravy. Vegetarian option also available. </div>
+									</td>
+									<td>£28.25</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>NICHOLSON’S HUNTER’S CHICKEN</h5>
+										<div id=food>Grilled chicken breast topped with smoked back bacon, BBQ sauce and mature Cheddar, served with triple-cooked chips and an heirloom tomato salad. </div>
+									</td>
+									<td>£27.40</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>10oz RIB-EYE STEAK</h5>
+										<div id=food>Aged for 21 days, served with flat mushroom, beef tomato and triple-cooked chips </div>
+									</td>
+									<td>£45.00</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<th>
+										<h4>Pasta</h4>
+									</th>
+									<th>Price</th>
+								</tr>
+								<tr>
+									<td>
+										<h5>MACARONI CHEESE (V)</h5>
+										<div id=food>Macaroni pasta in a rich cheese sauce topped with mature Cheddar, served with garlic bread. </div>
+									</td>
+									<td>£20.40</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<th>
+										<h4>Veggie</h4>
+									</th>
+									<th>Price</th>
+								</tr>
+								<tr>
+									<td>
+										<h5>BROWN RICE, QUINOA & LEMON SALAD (V)</h5>
+										<div id=food>Combined with heirloom tomatoes and mixed baby leaves and dressed with English herb oil. </div>
+									</td>
+									<td>£23.40</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>GLAZED SHALLOT TART TATIN (V)</h5>
+										<div id=food>Topped with honeyed goat’s cheese pearls and Braeburn apple salad. </div>
+									</td>
+									<td>£20.60</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<th>
+										<h4>Sides</h4>
+									</th>
+									<th class="menuPage_priceFix">Price</th>
+								</tr>
+								<tr>
+									<td>Marinated olives (V) </td>
+									<td class="menuPage_priceFix">£7.40</td>
+								</tr>
+								<tr>
+									<td>Bread with oil and butter (V)</td>
+									<td class="menuPage_priceFix">£5.75</td>
+								</tr>
+								<tr>
+									<td>Dauphinoise potatoes (V)
+										</h5>
+									</td>
+									<td class="menuPage_priceFix">£3.40</td>
+								</tr>
+								<tr>
+									<td>Triple-cooked chips (V) </td>
+									<td class="menuPage_priceFix">£3.00</td>
+								</tr>
+							</table>
+							<br />
+							<br />
+				</div>
+				<div id="Dessert" class="tabcontent">
+					<br />
+					<p>Nothing beats good food shared with good friends. We're serving many of your old favourites – and a few new ones.</p>
+					<table>
+						<tr>
+							<th>
+								<h4>Desserts</h4>
+							</th>
+							<th>Price</th>
+						</tr>
+						<tr>
+							<td>
+								<h5>TRIO OF DESSERTS (V)</h5>
+								<div id=food>Rich and luxurious brownie, salted caramel profiteroles and lemon tart, served with vanilla pod ice cream. </div>
+							</td>
+							<td>£10.40</td>
+						</tr>
+						<tr>
+							<td>
+								<h5>BELGIAN CHOCOLATE BROWNIE (V)</h5>
+								<div id=food>Rich and luxurious brownie, served warm with vanilla pod ice cream. </div>
+							</td>
+							<td>£8.25</td>
+						</tr>
+						<tr>
+							<td>
+								<h5>STICKY TOFFEE PUDDING (V)</h5>
+								<div id=food>Served with vanilla pod ice cream.</div>
+							</td>
+							<td>£7.40</td>
+						</tr>
+						<tr>
+							<td>
+								<h5>RHUBARB, PLUM & CHERRIES CRUMBLE (V)</h5>
+								<div id=food>Served with rich, creamy custard or vanilla pod ice cream.</div>
+							</td>
+							<td>£15.00</td>
+						</tr>
+					</table>
+					<br />
+					<br />
+				</div>
+			</div>
+			<script>
+				function openMenu(evt, title) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+
+					document.getElementById(title).style.display = "block";
+					evt.currentTarget.className += " active";
+
+				}
+
+				document.getElementById('defaultOpen').click();
+			</script>
+
+			<!--This div fixes footer overlaping content -->
+			<div class="stickyFooterFix"></div>
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="playGame" src="assets/ico/playGame.png">
+						<p>Play!</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<a href="https://www.facebook.com/piratebrews/"> <img src="assets/ico/facebook_Icon.png"> </a>
+					<a href="https://www.instagram.com/piratebrews/?hl=en"> <img src="assets/ico/instagram_Icon.png"> </a>
+					<a href="https://twitter.com/piratebrews"> <img src="assets/ico/twitter_Icon.png"> </a>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#newsletterPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/newsletter300px.png">
+						<p>Newsletter</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--MENU PAGE - Cassandra Haw-->
+
+	<div data-role="page" class="ui-responsive-panel" id="contactPage">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href="#home_page"><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#navPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a> <a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a> </div>
+		<!--HEADER END -->
+
+		<div data-role="content">
+			<div class="contactPageTitle">
+				<h1><span>Contact Us</span></h1>
+			</div>
+			<div class="contactForm">
+				<form>
+					<!--name-->
+					<input type="text" placeholder="Name" id="cName" data-clear-btn="true" autofocus/>
+					<br>
+					<!--email-->
+					<input type="text" placeholder="Email" id="cEmail" data-clear-btn="true" />
+					<br>
+					<!--subject-->
+					<input type="text" placeholder="Subject" id="cSubject" data-clear-btn="true" />
+					<br>
+					<!--message-->
+					<input type="text" placeholder="Message" id="cMessage" data-clear-btn="true" />
+					<br>
+					<!--submit button-->
+					<button type="submit" id="cSubmit">Submit</button>
+					<script>
+						$(document).ready(function () {
+							$("#cSubmit").click(function () {
+								var name = $("#cName").val();
+								var email = $("#cEmail").val();
+								var subject = $("#cSubject").val();
+								var message = $("#cMessage").val();
+								// Returns successful data submission message when the entered information is stored in database.
+								var dataString = 'name1=' + name + '&email1=' + email + '&subject1=' + subject + '&message1=' + message;
+								if (name == '' || email == '' || subject == '' || message == '') {
+									alert("Please Fill All Fields");
+								} else {
+									// AJAX Code To Submit Form.
+									$.ajax({
+										type: "POST",
+										url: "submit.php",
+										data: dataString,
+										cache: false,
+										success: function (result) {
+											alert("Message sent!");
+											window.location.href = "#home_page";
+										}
+									});
+
+								}
+								return false;
+							});
+
+						});
+					</script>
+				</form>
+			</div>
+			
+			<div class="mapSection">
+				<img src="assets/img/contactUsMap.png">
+				<p>
+					Pirate Brews, 123 Ave, n123bc, London, UK
+					<br><br>+44 34567891232
+					<br>info@piratebrews.com
+				</p>
+			</div>
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="playGame" src="assets/ico/playGame.png">
+						<p>Play!</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<a href="https://www.facebook.com/piratebrews/"> <img src="assets/ico/facebook_Icon.png"> </a>
+					<a href="https://www.instagram.com/piratebrews/?hl=en"> <img src="assets/ico/instagram_Icon.png"> </a>
+					<a href="https://twitter.com/piratebrews"> <img src="assets/ico/twitter_Icon.png"> </a>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#newsletterPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/newsletter300px.png">
+						<p>Newsletter</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--CONTACT PAGE - Cassandra Haw and Ioan Ghisoi-->
+
+	<div data-role="page" id="bookingPage">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href="#home_page"><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#navPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a> <a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a> </div>
+		<!--HEADER END -->
+
+		<div data-role="content">
+			<div class="contactPageTitle">
+				<h1><span>Book Now</span></h1>
+			</div>
+			<div class="bookingPage">
+				<!--name-->
+				<input onblur="validateFields('name')" type="text" placeholder="Name" id="bName" name="bName" data-clear-btn="true" autofocus/>
+				<br>
+				<!--email-->
+				<input onblur="validateFields('name')" type="text" placeholder="Email" id="bEmail" data-clear-btn="true" name="bEmail" />
+				<br>
+				<!--location-->
+				<select name="select-native-4" id="bLocationSelector">
+					<option>Location...</option>
+					<option value="1">Old Cavendish</option>
+					<option value="2">Marylebone</option>
+					<option value="3">Little Titchfield</option>
+					<option value="4">The Prince Regent</option>
+				</select>
+				<br>
+				<!--date-->
+				<!--<input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date"><br>-->
+				<input placeholder="enter a date" onblur="submitDetails()" type="date" value="2017-01-06" data-role="date" id="bdate">
+				<br>
+				<!--time-->
+				<select id="timeSelectorB">
+					<option id="1">Select Time</option>
+				</select>
+				<br>
+				<!--submit button-->
+				<button onclick="submitBooking()" id="bSubmit2" name="cInputButton"> Submit </button>
+				<!--booking popup trigger-->
+				<a style="visibility: hidden;" href="#bookingPopup" data-rel="popup" data-position-to="window"> <img id="bookingPopTrigger" src="assets/ico/star.png">
+					<p>Favourites</p>
+				</a>
+
+				<script>
+					var myTimeArray;
+					var aparitions = [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+					var fieldName = false,
+						fieldEmail = false;
+
+					function timePopulate() {
+						let count = -1;
+						try {
+							for (let i = 0; i < aparitions.length; i++) {
+								if (aparitions[i] < 16) {
+									if (count > 20) break;
+									var str = "<option id='" + (++count) + "'>" + i + "</option>"
+									$("#timeSelectorB").append(str);
+								}
+							}
+						} catch (ex) {
+
+						}
+					}
+
+					function _(x) {
+						return document.getElementById(x);
+					}
+
+					function hasSpecialCharacters(str) {
+						if (/[^a-zA-Z0-9\-\/]/.test(str)) {
+							return true;
+						}
+						return false;
+					}
+
+					function validateFields(field) {
+						switch (field) {
+						case "name":
+							if (_("bName").value.length < 3 || hasSpecialCharacters(_("bName").value)) {
+								fieldName = false;
+							} else {
+								fieldName = true;
+							}
+							break;
+						case "email":
+							if (/(.+)@(.+){2,}\.(.+){2,}/.test(_("bEmail").value)) {
+								fieldEmail = true;
+							} else {
+								fieldEmail = false;
+							}
+							break;
+						}
+
+					}
+
+					function isAllValidated() {
+						let a = validateFields("name");
+						let b = validateFields("email");
+						if (fieldName == true && fieldEmail == true) {
+							return true;
+						} else {
+							return false;
+						}
+					}
+
+					function submitBooking() {
+						var name = $("#bName").val();
+						var email = $("#bEmail").val();
+						var e = document.getElementById("bLocationSelector");
+						var location = e.options[e.selectedIndex].text;
+						var date = document.getElementById("bdate").value;
+						var t = document.getElementById("timeSelectorB");
+						var time = t.options[t.selectedIndex].text;
+						var dataStringSubmit = 'nameB=' + name + '&emailB=' + email + '&locationB=' + location + '&dateB=' + date + '&timeB=' + time;
+
+						if (isAllValidated()) {
+							console.log(isAllValidated());
+							// AJAX Code To Submit Form.
+							$.ajax({
+								type: "POST",
+								url: "submitBooking.php",
+								data: dataStringSubmit,
+								cache: false,
+								success: function (result) {
+									document.getElementById("bookingPopTrigger").click();
+								},
+								error: function (err) {
+									alert(err);
+								}
+							});
+						}
+					}
+
+					function submitDetails() {
+						var name = $("#bName").val();
+						var email = $("#bEmail").val();
+
+						var e = document.getElementById("bLocationSelector");
+						var location = e.options[e.selectedIndex].text;
+						var date = document.getElementById("bdate").value;
+
+						// Returns successful data submission message when the entered information is stored in database.
+						var dataString = 'location1=' + location + '&date1=' + date;
+						if (!isAllValidated()) {
+							alert("Make sure you fill in the email corectly. ( example: john@email.com). Also the name is not allowed with special characters.");
+						} else {
+							// AJAX Code To Submit Form.
+							$.ajax({
+								type: "POST",
+								url: "submit2.php",
+								data: dataString,
+								cache: false,
+								dataType: "json",
+								success: function (result) {
+									for (let i = 0; i <= result.length - 1; i++) {
+										myTimeArray += " " + result[i]['time'];
+									}
+									try {
+										intArray = myTimeArray.split(" ").map(Number).filter(Boolean);
+										myTimeArray = intArray; //array with all the times booked
+									} catch (err) {
+
+									}
+
+									if (myTimeArray != undefined) {
+										for (let i = 0; i < myTimeArray.length; i++) {
+											try {
+												if (aparitions[myTimeArray[i]] < 16) {
+													aparitions[myTimeArray[i]]++;
+												}
+											} catch (ex) {
+
+											}
+										}
+									}
+									timePopulate();
+								},
+								error: function () {
+									alert("Error please try again.");
+								}
+							});
+
+						}
+						document.getElementById("timeSelectorB").click();
+					}
+				</script>
+
+				<!--</form>-->
+			</div>
+
+			<!--This div fixes footer overlaping content -->
+			<div class="stickyFooterFix"></div>
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="playGame" src="assets/ico/playGame.png">
+						<p>Play!</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<a href="https://www.facebook.com/piratebrews/"> <img src="assets/ico/facebook_Icon.png"> </a>
+					<a href="https://www.instagram.com/piratebrews/?hl=en"> <img src="assets/ico/instagram_Icon.png"> </a>
+					<a href="https://twitter.com/piratebrews"> <img src="assets/ico/twitter_Icon.png"> </a>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#newsletterPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/newsletter300px.png">
+						<p>Newsletter</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--BOOKING PAGE - Ioan Ghisoi-->
+
+	<div data-role="page" class="ui-responsive-panel" id="game_page">
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+			<h1> <a href=""><img src="assets/ico/text_logo_gray.png"></a> </h1>
+			<a href="#gameNavPanel" data-icon="bars" data-iconpos="notext" class="gameNav_hidden">Menu</a>
+			<a href="#quitGamePopup" data-icon="home" data-iconpos="notext" data-rel="popup" data-position-to="window">Home</a>
+		</div>
+		<!--HEADER END -->
+
+		<div data-role="content" id="game_ContentPage">
+			<div id="map" style="height:100%"></div>
+			<button id="gameUserLocationBtn"><img src="assets/ico/gps.png"></button>
+			<button id="gameDigForTreasureBtn"><img src="assets/ico/treasure.png"></button>
+			<button id="gameEmailFavBtn"><img src="assets/ico/emailFav.png"></button>
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#gameFavPopup" data-rel="popup" data-position-to="window"> <img id="" src="assets/ico/star.png">
+						<p>Favourites</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVRuler1">
+						<a href="#gameShopPopup" data-rel="popup" data-position-to="window"> <img id="" src="assets/ico/bag.png">
+							<p>Shop</p>
+						</a>
+					</div>
+				</div>
+				<div class="footerTaskbar3">
+					<div class="footerVRuler">
+						<a href="#gameHintsPopup" data-rel="popup" data-position-to="window"> <img id="" src="assets/ico/map.png">
+							<p>Hints</p>
+						</a>
+					</div>
+				</div>
+				<div class="footerTaskbar4">
+					<a href="#gameUserStatsPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/avatar.png">
+						<p>Stats</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--MAIN GAME PAGE - Gabriel Periotto-->
+
+	<div data-role="page" class="ui-responsive-panel" id="signIn_page">
+
+		<!--
+		<div data-role="header" data-theme="b" data-tap-toggle="false" data-position="fixed" class="ui-nodisc-icon">
+
+			<h1>
+            <a href="#home_page"><img src="assets/ico/small_logo.png"></a>
+        </h1>
+			<a href="#gameNavPanel" data-icon="bars" data-iconpos="notext" class="">Menu</a>
+			<a href="#bookingPage" data-icon="calendar" data-iconpos="notext">Book</a>
+		</div>
+-->
+		<!--HEADER END -->
+
+		<div data-role="content">
+			<div class="signInContainer">
+				<div class="innerContent"> <img class="gameFormLogo" src="assets/ico/text_logo.png">
+					<form method="post" action="demoform.asp">
+						<label for="email" class="ui-hidden-accessible">Email</label>
+						<input type="email" name="email" id="emailL" data-clear-btn="true" placeholder="Enter Your Email...">
+						<label for="password" class="ui-hidden-accessible">Password</label>
+						<input type="password" name="password" id="passwordL" data-clear-btn="true" placeholder="Enter Your Password...">
+					</form>
+					<a onclick="singnIn()" class="ui-btn" id="gameButton">Sign In!</a>
+					<a href="#signUp_page" class="ui-btn" id="signUpButton">Sign Up!</a> </div>
+				<a style="visibility: hidden;" href="#game_page"> <img id="goGameTrigger">
+					<p>PlayGame</p>
+				</a>
+				<br>
+				<center><a href="#forgetPopup" data-rel="popup" data-position-to="window">Forgot password</a></center>
+			</div>
+
+			<script>
+				var nick;
+
+				function openGame() {
+					$("#goGameTrigger").click();
+					alert("Welcome to the game  " + nick);
+				}
+
+				function singnIn() {
+					var signArray;
+					var emailL = $("#emailL").val();
+					var passwordL = $("#passwordL").val();
+					var dataStringLOGIN = 'emailL=' + emailL + '&passwordL=' + passwordL;
+
+					$.ajax({
+						type: "POST",
+						url: "signIn.php",
+						data: dataStringLOGIN,
+						cache: false,
+						dataType: "json",
+						success: function (result) {
+							try {
+								if (emailL == "" || emailL == "") {
+									alert("You need to complete the 2 fields before signing in.");
+								} else if (passwordL == result[0].password) {
+									nick = result[0].nickname;
+									openGame();
+								}
+							} catch (err) {
+								alert("Wrong password or username");
+							}
+
+						},
+						error: function (err) {
+							alert(err);
+						}
+					});
+				}
+			</script>
+
+			<!--This div fixes footer overlaping content -->
+			<!--			<div class="stickyFooterFix"></div>-->
+
+		</div>
+		<!--CONTENT-->
+
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#home_page"> <img id="back" src="assets/ico/backArrow.png">
+						<p>Back</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#gameRulesPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/rules.png">
+						<p>Rules</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--FOOTER-->
+
+	</div>
+	<!--Game Sign In Page - Siddharth Vaswani-->
+
+	<div data-role="page" class="ui-responsive-panel" id="signUp_page">
+		<div data-role="content">
+
+			<!--CONTENT-->
+			<div class="signUpContainer">
+				<div class="innerContent"> <img class="gameFormLogo" src="assets/ico/text_logo.png">
+					<div class="center">
+						<form method="post" action="demoform.asp">
+							<div class="ui-field-contain">
+								<label for="fname" class="ui-hidden-accessible">First Name</label>
+								<input type="text" name="fname" id="fnameSU" data-clear-btn="true" placeholder="Enter Your First Name...">
+								<label for="sname" class="ui-hidden-accessible">Surname</label>
+								<input type="text" name="sname" id="snameSU" data-clear-btn="true" placeholder="Enter Your Last Name...">
+								<label for="email" class="ui-hidden-accessible">Email</label>
+								<input type="email" name="email" id="emailSU" data-clear-btn="true" placeholder="Enter Your Email...">
+								<label for="password" class="ui-hidden-accessible">Password</label>
+								<input type="password" name="password" id="passwordSU" data-clear-btn="true" placeholder="Enter A Password...">
+								<label for="nname" class="ui-hidden-accessible">Nickname</label>
+								<input type="text" name="nname" id="nickSU" data-clear-btn="true" placeholder="Enter A Nickname...">
+								<fieldset data-role="controlgroup">
+									<label for="terms">Terms and Conditions</label>
+									<input type="checkbox" name="terms" id="terms" value="terms">
+									<label for="news">Weekly Newsletter</label>
+									<input type="checkbox" checked name="news" id="news" value="news">
+								</fieldset>
+							</div>
+						</form>
+						<a onclick="submitSignUpGame()" href="#gameButton" class="ui-btn" id="signUpGameButton">Sign Up!</a> </div>
+				</div>
+				<script>
+					function _(x) {
+						return document.getElementById(x);
+					}
+
+					function submitSignUpGame() {
+
+						var firstName = $("#fnameSU").val();
+						var lastName = $("#snameSU").val();
+						var email = $("#emailSU").val();
+						var password = $("#passwordSU").val();
+						var nick = $("#nickSU").val();
+
+						var signUpSubmitString = 'emailS=' + email + '&firstNameS=' + firstName + '&lastNameS=' + lastName + '&passwordS=' + password + '&nickS=' + nick;
+						console.log(signUpSubmitString)
+						console.log(isAllValidated());
+						// AJAX Code To Submit Form.
+						$.ajax({
+							type: "POST",
+							url: "submitSignUp.php",
+							data: signUpSubmitString,
+							cache: false,
+							success: function (result) {
+								alert(result);
+							},
+							error: function (err) {
+								alert(err);
+							}
+						});
+					}
+				</script>
+			</div>
+		</div>
+		<!--/CONTENT-->
+
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			<!--FOOTER-->
+			<div class="footerContainer">
+				<div class="footerTaskbar1">
+					<a href="#signIn_page"> <img id="back" src="assets/ico/backArrow.png">
+						<p>Back</p>
+					</a>
+				</div>
+				<div class="footerTaskbar2">
+					<div class="footerVerticalRuler"></div>
+					<div class="footerVerticalRuler"></div>
+				</div>
+				<div class="footerTaskbar3">
+					<a href="#gameTermsPopup" data-rel="popup" data-position-to="window"> <img src="assets/ico/terms.png">
+						<p>T&C</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--/FOOTER-->
+
+	</div>
+	<!--Game Sign Up Page - Siddharth Vaswani-->
+
+	<div data-role="panel" data-position-fixed="true" data-theme="b" id="navPanel">
+		<ul data-role="listview" data-theme="b" class="nav-search">
+			<li data-icon="false">
+				<a href="#home_page" class="panelItemHome"><img src="assets/ico/small_logo.png">
+					<p>Home</p>
+				</a>
+			</li>
+			<hr>
+			<li data-icon="false"><a href="#about_page">About Us</a></li>
+			<hr>
+			<li data-icon="false"><a href="#pub_page">Find Pub</a></li>
+			<hr>
+			<li data-icon="false"><a href="#bookingPage">Booking</a></li>
+			<hr>
+			<li data-icon="false"><a href="#menu_page">Menu</a></li>
+			<hr>
+			<li data-icon="false"><a href="#signIn_page">Play</a></li>
+			<hr>
+			<li data-icon="false"><a href="#contactPage">Contact Us</a></li>
+		</ul>
+	</div>
+	<!--NAV PANEL - Gabriel Periotto-->
+
+	<div data-role="panel" data-position-fixed="true" data-theme="b" id="gameNavPanel">
+		<ul data-role="listview" data-theme="b" class="nav-search">
+			<li data-icon="false">
+				<a href="#home_page" class="panelItemHome"><img src="assets/ico/small_logo.png">
+					<p>Home</p>
+				</a>
+			</li>
+			<hr>
+			<li data-icon="false"><a href="#">game</a></li>
+			<hr>
+			<li data-icon="false"><a href="#">game</a></li>
+			<hr>
+			<li data-icon="false"><a href="#">game</a></li>
+			<hr>
+			<li data-icon="false"><a href="#">game</a></li>
+			<hr>
+			<li data-icon="false"><a href="#">game</a></li>
+			<hr>
+			<li data-icon="false"><a href="#">game</a></li>
+		</ul>
+	</div>
+	<!--GAME NAV PANEL-->
+
+	<div data-role="popup" id="newsletterPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>SUBSCRIBE TO NEWSLETTER</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<form id="newsletterForm">
+				<input type="email" name="newsletterTextField" id="newsletterTextField" placeholder="Email Address" value="">
+				<p class="newsletterTextFieldValidation">&nbsp;</p>
+				<input class="newsletterButton" type="submit" value="Sign Up">
+			</form>
+			<p>Keep updated with PIRATE BREWS. Sign up for our email newsletter now.</p>
+		</div>
+	</div>
+	<!--NEWSLETTER POPUP  Gabriel Periotto-->
+
+	<div data-role="popup" id="gameRulesPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Rules & Instructions</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<strong id="docs-internal-guid-6e4a7017-6a9e-f97b-2d86-3dd3a2d32595">
+			<p dir="ltr">To Start playing Pirate Brews™ game first start by creating a account with us. This will allow your progress on the game to be saved in our database and allow you to keep your data persistent the more you play.</p>
+			<p dir="ltr">The main aim of the game is to find a section of a treasure map at any pub and then travel to a near point of interest that is featured on that section of map to gain a promotion.<br>
+			  The goal of this game is to collect all the treasure maps section to create a one full treasure map to gain the larger promotion. </p>
+			<p dir="ltr">There is a leveling system in this game, the more you play the more XP you will gain and thus the higher levels you will achieve.</p>
+			<p dir="ltr"><strong>There are 4 menus in our game:</strong></p>
+			<p dir="ltr"><strong>Favorites:</strong> These are the Pubs and Point of Interest that you have favourited. This is also the place where your promotion code that you have unlocked will displayed.</p>
+			<p dir="ltr"><strong>Shop:</strong> Here you can purchase additional items that will enhance your gaming experience.</p>
+			<p dir="ltr"><strong>Hints:</strong> Here you can see the current treasure map piece that you have and the Point of Interest you need to go to next to get a chance of getting a promotion code.</p>
+			<p dir="ltr"><strong>Achievements:</strong> Here you can track your progress and show all the achievements you have achieved while playing the game.</p>
+			<p dir="ltr"><strong>There are a few more menus in our game that are inside the top left menu:</strong></p>
+			<p dir="ltr"><strong>Rules &amp; Instructions:</strong> The menu you are currently looking at</p>
+			<p dir="ltr"><strong>Settings:</strong> Here you can adjust certain settings of the game. You can also view the terms of service of the game</p>
+			<p dir="ltr">If you would like to exit the game press the home button the top right side, this will take you back to the main page of the app.</p>
+			</strong>
+		</div>
+	</div>
+	<!--GAME RULES POPUP - Siddharth Vaswani-->
+
+	<div data-role="popup" id="gameTermsPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Terms and Conditions</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<p>1.     This template legal document was produced and published by SEQ Legal LLP.
+				<br> 2.     We control the copyright in this template, and you may only use this template in accordance with the licensing provisions in our terms and conditions. Those licensing provisions include an obligation to retain the SEQ Legal credit incorporated into the template.
+				<br> 3.     The current version of our terms and conditions is available at: <a href="http://www.seqlegal.com/our-terms-and-conditions">http://www.seqlegal.com/our-terms-and-conditions</a>.
+				<br> 4.     If you would like to use this template without the SEQ Legal credit, you can purchase a licence to do so at: <a href="http://www.website-contracts.co.uk/seqlegal-licences.html">http://www.website-contracts.co.uk/seqlegal-licences.html</a>
+				<br> 5.     You will need to edit this template before use. Guidance notes to help you do so are set out at the end of the template. During the editing process, you should delete those guidance notes and this cover sheet. Square brackets in the body of the document indicate areas that require editorial attention. &quot;ORs&quot; in the body of the document indicate alternative provisions. By the end of the editing process, there should be no square brackets left in the body of the document, and only one alternative from each set of alternatives should remain. Elements may be specified as optional in the accompanying notes, but that does not mean that they are in all cases removable. Depending upon the circumstances, an optional element may be: (i) required by law; or (ii) necessary to ensure that the document is internally consistent.
+				<br> 6.     If you have any doubts about the editing or use of this template, you should seek professional legal advice.
+				<br> 7.     You may be able to get free legal guidance using our public Q&amp;A system, available at: <a href="http://www.seqlegal.com/questions">http://www.seqlegal.com/questions</a>.
+				<br> 8.     You can request a quote for legal services (including the adaptation or review of a legal document produced from this template) using this form: <a href="http://www.seqlegal.com/request-quote">http://www.seqlegal.com/request-quote</a>.</p>
+			<br clear="all">
+			<p align="center"><strong>Terms and conditions  of use</strong>
+				<br>
+				<strong>1.       Introduction</strong>
+				<br> 1.1    These terms and conditions shall govern your use of our website.
+				<br> 1.2    By using our website, you accept these terms and conditions in full; accordingly, if you disagree with these terms and conditions or any part of these terms and conditions, you must not use our website.
+				<br> 1.3    If you [register with our website, submit any material to our website or use any of our website services], we will ask you to expressly agree to these terms and conditions.
+				<br> 1.4    You must be at least [18] years of age to use our website; by using our website or agreeing to these terms and conditions, you warrant and represent to us that you are at least [18] years of age.
+				<br> 1.5    Our website uses cookies; by using our website or agreeing to these terms and conditions, you consent to our use of cookies in accordance with the terms of our [privacy and cookies policy].
+				<br>
+				<strong>2.       Credit</strong>
+				<br> 2.1    This document was created using a template from SEQ Legal (<a href="http://www.seqlegal.com">http://www.seqlegal.com</a>).
+				<br>
+				<em>You must retain the above credit. Use of this  document without the credit is an infringement of copyright. However, you can  purchase from us an equivalent document that does not include the credit.</em>
+				<br>
+				<strong>3.       Copyright notice</strong>
+				<br> 3.1    Copyright (c) <em>[year(s)  of first publication]</em> <em>[full name]</em>.
+				<br> 3.2    Subject to the express provisions of these terms and conditions:
+				<br> (a)    we, together with our licensors, own and control all the copyright and other intellectual property rights in our website and the material on our website; and
+				<br> (b)    all the copyright and other intellectual property rights in our website and the material on our website are reserved.
+				<br>
+				<strong>4.       Licence to use website</strong>
+				<br> 4.1    You may:
+				<br> (a)    view pages from our website in a web browser;
+				<br> (b)    download pages from our website for caching in a web browser;
+				<br> (c)    print pages from our website;
+				<br> (d)    [stream audio and video files from our website]; and
+				<br> (e)    [use [our website services] by means of a web browser],
+				<br> subject to the other provisions of these terms and conditions.
+				<br> 4.2    Except as expressly permitted by Section 4.1 or the other provisions of these terms and conditions, you must not download any material from our website or save any such material to your computer.
+				<br> 4.3    You may only use our website for [your own personal and business purposes], and you must not use our website for any other purposes.
+				<br> 4.4    Except as expressly permitted by these terms and conditions, you must not edit or otherwise modify any material on our website.
+				<br> 4.5    Unless you own or control the relevant rights in the material, you must not:
+				<br> (a)    republish material from our website (including republication on another website);
+				<br> (b)    sell, rent or sub-license material from our website;
+				<br> (c)    show any material from our website in public;
+				<br> (d)    exploit material from our website for a commercial purpose; or
+				<br> (e)    redistribute material from our website.
+				<br> 4.6    Notwithstanding Section 4.5, you may redistribute [our newsletter] in [print and electronic form] to [any person].
+				<br> 4.7    We reserve the right to restrict access to areas of our website, or indeed our whole website, at our discretion; you must not circumvent or bypass, or attempt to circumvent or bypass, any access restriction measures on our website.
+				<br>
+				<strong>5.       Acceptable use</strong>
+				<br> 5.1    You must not:
+				<br> (a)    use our website in any way or take any action that causes, or may cause, damage to the website or impairment of the performance, availability or accessibility of the website;
+				<br> (b)    use our website in any way that is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity;
+				<br> (c)    use our website to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software;
+				<br> (d)    [conduct any systematic or automated data collection activities (including without limitation scraping, data mining, data extraction and data harvesting) on or in relation to our website without our express written consent];
+				<br> (e)    [access or otherwise interact with our website using any robot, spider or other automated means[, except for the purpose of [search engine indexing]]];
+				<br> (f)    [violate the directives set out in the robots.txt file for our website]; or
+				<br> (g)    [use data collected from our website for any direct marketing activity (including without limitation email marketing, SMS marketing, telemarketing and direct mailing)].
+				<br>
+				<em>[additional list items]</em>
+				<br> 5.2    You must not use data collected from our website to contact individuals, companies or other persons or entities.
+				<br> 5.3    You must ensure that all the information you supply to us through our website, or in relation to our website, is [true, accurate, current, complete and non-misleading].
+				<br>
+				<strong>6.       Registration and accounts</strong>
+				<br> 6.1    To be eligible for [an account] on our website under this Section 6, you must [be resident or situated in the United Kingdom].
+				<br> 6.2    You may register for an account with our website by [completing and submitting the account registration form on our website, and clicking on the verification link in the email that the website will send to you].
+				<br> 6.3    You must not allow any other person to use your account to access the website.
+				<br> 6.4    You must notify us in writing immediately if you become aware of any unauthorised use of your account.
+				<br> 6.5    You must not use any other person's account to access the website[, unless you have that person's express permission to do so].
+				<br>
+				<strong>7.       User login details</strong>
+				<br> 7.1    If you register for an account with our website, [we will provide you with] OR [you will be asked to choose] [a user ID and password].
+				<br> 7.2    Your user ID must not be liable to mislead and must comply with the content rules set out in Section 10; you must not use your account or user ID for or in connection with the impersonation of any person.
+				<br> 7.3    You must keep your password confidential.
+				<br> 7.4    You must notify us in writing immediately if you become aware of any disclosure of your password.
+				<br> 7.5    You are responsible for any activity on our website arising out of any failure to keep your password confidential, and may be held liable for any losses arising out of such a failure.
+				<br>
+				<strong>8.       Cancellation and suspension of account</strong>
+				<br> 8.1    We may:
+				<br> (a)    [suspend your account];
+				<br> (b)    [cancel your account]; and/or
+				<br> (c)    [edit your account details],
+				<br> at any time in our sole discretion without notice or explanation.
+				<br> 8.2    You may cancel your account on our website [using your account control panel on the website].
+				<br>
+				<strong>9.       Your content: licence</strong>
+				<br> 9.1    In these terms and conditions, &quot;your content&quot; means [all works and materials (including without limitation text, graphics, images, audio material, video material, audio-visual material, scripts, software and files) that you submit to us or our website for storage or publication on, processing by, or transmission via, our website].
+				<br> 9.2    You grant to us a [worldwide, irrevocable, non-exclusive, royalty-free licence] to [use, reproduce, store, adapt, publish, translate and distribute your content in any existing or future media] OR [reproduce, store and publish your content on and in relation to this website and any successor website] OR [reproduce, store and, with your specific consent, publish your content on and in relation to this website].
+				<br> 9.3    You grant to us the right to sub-license the rights licensed under Section 9.2.
+				<br> 9.4    You grant to us the right to bring an action for infringement of the rights licensed under Section 9.2.
+				<br> 9.5    You hereby waive all your moral rights in your content to the maximum extent permitted by applicable law; and you warrant and represent that all other moral rights in your content have been waived to the maximum extent permitted by applicable law.
+				<br> 9.6    You may edit your content to the extent permitted using the editing functionality made available on our website.
+				<br> 9.7    Without prejudice to our other rights under these terms and conditions, if you breach any provision of these terms and conditions in any way, or if we reasonably suspect that you have breached these terms and conditions in any way, we may delete, unpublish or edit any or all of your content.
+				<br>
+				<strong>10.    Your content: rules</strong>
+				<br> 10.1  You warrant and represent that your content will comply with these terms and conditions.
+				<br> 10.2  Your content must not be illegal or unlawful, must not infringe any person's legal rights, and must not be capable of giving rise to legal action against any person (in each case in any jurisdiction and under any applicable law).
+				<br> 10.3  Your content, and the use of your content by us in accordance with these terms and conditions, must not:
+				<br> (a)    be libellous or maliciously false;
+				<br> (b)    be obscene or indecent;
+				<br> (c)    infringe any copyright, moral right, database right, trade mark right, design right, right in passing off, or other intellectual property right;
+				<br> (d)    infringe any right of confidence, right of privacy or right under data protection legislation;
+				<br> (e)    constitute negligent advice or contain any negligent statement;
+				<br> (f)    constitute an incitement to commit a crime[, instructions for the commission of a crime or the promotion of criminal activity];
+				<br> (g)    be in contempt of any court, or in breach of any court order;
+				<br> (h)    be in breach of racial or religious hatred or discrimination legislation;
+				<br> (i)     be blasphemous;
+				<br> (j)     be in breach of official secrets legislation;
+				<br> (k)    be in breach of any contractual obligation owed to any person;
+				<br> (l)     [depict violence[ in an explicit, graphic or gratuitous manner]];
+				<br> (m)   [be pornographic[, lewd, suggestive or sexually explicit]];
+				<br> (n)    [be untrue, false, inaccurate or misleading];
+				<br> (o)    [consist of or contain any instructions, advice or other information which may be acted upon and could, if acted upon, cause illness, injury or death, or any other loss or damage];
+				<br> (p)    [constitute spam];
+				<br> (q)    [be offensive, deceptive, fraudulent, threatening, abusive, harassing, anti-social, menacing, hateful, discriminatory or inflammatory]; or
+				<br> (r)    [cause annoyance, inconvenience or needless anxiety to any person].
+				<br>
+				<em>[additional list items]</em>
+				<br>
+				<strong>11.    Limited warranties</strong>
+				<br> 11.1  We do not warrant or represent:
+				<br> (a)    the completeness or accuracy of the information published on our website;
+				<br> (b)    that the material on the website is up to date; or
+				<br> (c)    that the website or any service on the website will remain available.
+				<br> 11.2  We reserve the right to discontinue or alter any or all of our website services, and to stop publishing our website, at any time in our sole discretion without notice or explanation; and save to the extent expressly provided otherwise in these terms and conditions, you will not be entitled to any compensation or other payment upon the discontinuance or alteration of any website services, or if we stop publishing the website.
+				<br> 11.3  To the maximum extent permitted by applicable law and subject to Section 12.1, we exclude all representations and warranties relating to the subject matter of these terms and conditions, our website and the use of our website.
+				<br>
+				<strong>12.    Limitations and exclusions of liability</strong>
+				<br> 12.1  Nothing in these terms and conditions will:
+				<br> (a)    limit or exclude any liability for death or personal injury resulting from negligence;
+				<br> (b)    limit or exclude any liability for fraud or fraudulent misrepresentation;
+				<br> (c)    limit any liabilities in any way that is not permitted under applicable law; or
+				<br> (d)    exclude any liabilities that may not be excluded under applicable law.
+				<br> 12.2  The limitations and exclusions of liability set out in this Section 12 and elsewhere in these terms and conditions:
+				<br> (a)    are subject to Section 12.1; and
+				<br> (b)    govern all liabilities arising under these terms and conditions or relating to the subject matter of these terms and conditions, including liabilities arising in contract, in tort (including negligence) and for breach of statutory duty, except to the extent expressly provided otherwise in these terms and conditions.
+				<br> 12.3  To the extent that our website and the information and services on our website are provided free of charge, we will not be liable for any loss or damage of any nature.
+				<br> 12.4  We will not be liable to you in respect of any losses arising out of any event or events beyond our reasonable control.
+				<br> 12.5  We will not be liable to you in respect of any business losses, including (without limitation) loss of or damage to profits, income, revenue, use, production, anticipated savings, business, contracts, commercial opportunities or goodwill.
+				<br> 12.6  We will not be liable to you in respect of any loss or corruption of any data, database or software.
+				<br> 12.7  We will not be liable to you in respect of any special, indirect or consequential loss or damage.
+				<br> 12.8  You accept that we have an interest in limiting the personal liability of our officers and employees and, having regard to that interest, you acknowledge that we are a limited liability entity; you agree that you will not bring any claim personally against our officers or employees in respect of any losses you suffer in connection with the website or these terms and conditions (this will not, of course, limit or exclude the liability of the limited liability entity itself for the acts and omissions of our officers and employees).
+				<br>
+				<strong>13.    Breaches of these terms and conditions</strong>
+				<br> 13.1  Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, or if we reasonably suspect that you have breached these terms and conditions in any way, we may:
+				<br> (a)    send you one or more formal warnings;
+				<br> (b)    temporarily suspend your access to our website;
+				<br> (c)    permanently prohibit you from accessing our website;
+				<br> (d)    [block computers using your IP address from accessing our website];
+				<br> (e)    [contact any or all of your internet service providers and request that they block your access to our website];
+				<br> (f)    commence legal action against you, whether for breach of contract or otherwise; and/or
+				<br> (g)    [suspend or delete your account on our website].
+				<br>
+				<em>[additional list items]</em>
+				<br> 13.2  Where we suspend or prohibit or block your access to our website or a part of our website, you must not take any action to circumvent such suspension or prohibition or blocking[ (including without limitation [creating and/or using a different account])].
+				<br>
+				<strong>14.    Variation</strong>
+				<br> 14.1  We may revise these terms and conditions from time to time.
+				<br> 14.2  [The revised terms and conditions shall apply to the use of our website from the date of publication of the revised terms and conditions on the website, and you hereby waive any right you may otherwise have to be notified of, or to consent to, revisions of these terms and conditions.] OR [We will give you written notice of any revision of these terms and conditions, and the revised terms and conditions will apply to the use of our website from the date that we give you such notice; if you do not agree to the revised terms and conditions, you must stop using our website.]
+				<br> 14.3  If you have given your express agreement to these terms and conditions, we will ask for your express agreement to any revision of these terms and conditions; and if you do not give your express agreement to the revised terms and conditions within such period as we may specify, we will disable or delete your account on the website, and you must stop using the website.
+				<br>
+				<strong>15.    Assignment</strong>
+				<br> 15.1  You hereby agree that we may assign, transfer, sub-contract or otherwise deal with our rights and/or obligations under these terms and conditions.
+				<br> 15.2  You may not without our prior written consent assign, transfer, sub-contract or otherwise deal with any of your rights and/or obligations under these terms and conditions.
+				<br>
+				<strong>16.    Severability</strong>
+				<br> 16.1  If a provision of these terms and conditions is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions will continue in effect.
+				<br> 16.2  If any unlawful and/or unenforceable provision of these terms and conditions would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect.
+				<br>
+				<strong>17.    Third party rights</strong>
+				<br> 17.1  A contract under these terms and conditions is for our benefit and your benefit, and is not intended to benefit or be enforceable by any third party.
+				<br> 17.2  The exercise of the parties' rights under a contract under these terms and conditions is not subject to the consent of any third party.
+				<br>
+				<strong>18.    Entire agreement</strong>
+				<br> 18.1  Subject to Section 12.1, these terms and conditions[, together with [our privacy and cookies policy],] shall constitute the entire agreement between you and us in relation to your use of our website and shall supersede all previous agreements between you and us in relation to your use of our website.
+				<br>
+				<strong>19.    Law and jurisdiction</strong>
+				<br> 19.1  These terms and conditions shall be governed by and construed in accordance with [English law].
+				<br> 19.2  Any disputes relating to these terms and conditions shall be subject to the [exclusive] OR [non-exclusive] jurisdiction of the courts of [England].
+				<br>
+				<strong>20.    Statutory and regulatory disclosures</strong>
+				<br> 20.1  We are registered in <em>[trade register]</em>; you can find the online version of the register at <em>[URL]</em>, and our registration number is <em>[number]</em>.
+				<br> 20.2  We are subject to <em>[authorisation  scheme]</em>, which is supervised by <em>[supervisory authority]</em>.
+				<br> 20.3  We are registered as <em>[title]</em> with <em>[professional body]</em> in <em>[the United Kingdom]</em> and are subject to <em>[rules]</em>, which can be found at <em>[URL]</em>.
+				<br> 20.4  We subscribe to <em>[code(s)  of conduct]</em>, which can be consulted electronically at <em>[URL(s)]</em>.
+				<br> 20.5  Our VAT number is <em>[number]</em>.
+				<br>
+				<strong>21.    Our details</strong>
+				<br> 21.1  This website is owned and operated by <em>[name]</em>.
+				<br> 21.2  We are registered in [England and Wales] under registration number <em>[number]</em>, and our registered office is at <em>[address]</em>.
+				<br> 21.3  Our principal place of business is at <em>[address]</em>.
+				<br> 21.4  You can contact us:
+				<br> (a)    [by post, using the postal address [given above]];
+				<br> (b)    [using our website contact form];
+				<br> (c)    [by telephone, on [the contact number published on our website from time to time]]; or
+				<br> (d)    [by email, using [the email address published on our website from time to time]].</p>
+
+		</div>
+	</div>
+	<!--GAME Terms POPUP - Siddharth Vaswani-->
+
+	<div data-role="popup" id="quitGamePopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Quit the game?</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<p>QUIT?</p>
+			<a href="#home_page">Yes</a> <a href="#" data-rel="back">No</a> </div>
+	</div>
+	<!--QUIT GAME POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="gameFavPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>FAVOURITES</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<div class="gameFavPopupDiv">
+				<a href="#" id="favoritedPoi1">
+					<img src="assets/img/poi1.png">
+					<span style="">BT Tower</span>
+				</a>
+			</div>	
+			<div>
+				<a href="#" id="favoritedPoi2">
+					<img src="assets/img/poi2.png">
+					<span style="">Madame Tussauds</span>
+				</a>
+			</div>
+			<div>
+				<a href="#" id="favoritedPoi3">
+					<img src="assets/img/poi3.png">
+					<span style="">Oxford street</span>
+				</a>
+			</div>
+			<div>
+				<a href="#" id="favoritedPoi4">
+					<img src="assets/img/poi4.png">
+					<span style="">Cavendish Square Gardens</span>
+				</a>
+			</div>
+			<h3 id="favPopupEmpty">No Favourites added</h3>
+		</div>
+	</div>
+	<!--GAME FAV POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="gameHintsPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>HINTS</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<div class="gameHintsPopupDiv">
+				<h5 id="hint1">It Rhymes with ET.</h5>
+				<h5 id="hint2">I am very tall, but I can’t talk. I am very slender, but I am not a gender.</h5>
+				<hr>
+				<h5 id="hint3">Who knew that the key to immortality was wax.</h5>
+				<h5 id="hint4">The Queen never looked so young.</h5>
+				<hr>
+				<h5 id="hint5">I get very crowded at rush hour.</h5>
+				<h5 id="hint6">You’re more likely to find someone you know here than anywhere else in the world.</h5>
+				<hr>
+				<h5 id="hint7">People from 1717 really know how to have a nice picnic.</h5>
+				<h5 id="hint8">Sometimes a day in the park is all that’s needed.</h5>
+			</div>	
+			
+			<h3 id="hintsPopupEmpty">No Hints Found Yet</h3>
+		</div>
+	</div>
+	<!--GAME HINTS POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="gameTreasureFoundPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			
+			<div id="poiFav1">
+				<input type="checkbox" class="glyphicon glyphicon-star-empty" >
+			</div>
+			<div id="poiFav2">
+				<input type="checkbox" class="glyphicon glyphicon-star-empty" >
+			</div>
+			<div id="poiFav3">
+				<input type="checkbox" class="glyphicon glyphicon-star-empty" >
+			</div>
+			<div id="poiFav4">
+				<input type="checkbox" class="glyphicon glyphicon-star-empty" >
+			</div>
+
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<h4>Argh matey, you found: <span id='gameTreasureFoundPopup_item'>"xxxx"</span></h4>
+			<img id="gameTreasureFoundPopup_img" src="assets/img/poi2.png">
+			<p id="poiInfo"></p>
+			<div>	
+				<h4 id="gameTreasureFoundPopup_pts"></h4>
+				<h4 id="gameTreasureFoundPopup_discount">Discount code: <span>brew25</span></h4>
+			</div>
+						
+		</div>
+	</div>
+	<!--GAME TREASURE FOUND POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="gameUserStatsPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Player Stats</h1>
+
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			
+			<h4 href="#" id="gameUserStatsPopup_lvlContainer">
+				<span>Level: </span>
+				<img src="assets/ico/lvl1.png" style"vertical-align:middle;">
+				
+			</h4>
+			<hr>
+			<h4>Score: <span id='gameUserStatsPopup_score'>"xxxx"</span></h4>
+			<hr>
+			<h4>Hints Found: <span id='gameUserStatsPopup_hints'>"xxxx"</span></h4>
+			<hr>
+			<a href="#" id="gameUserStatsPopup_TokensContainer">
+				
+				Tokens: <span id='gameUserStatsPopup_Tokens'>xxxx</span>
+				<img src="assets/ico/coin.png">
+			</a>
+						
+		</div>
+	</div>
+	<!--GAME STATS POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="gameShopPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Shop</h1>
+
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			
+		
+				<a href="#" id="gameShopPopup_buyTokens">		
+					<span>Buy Treasure Chest</span>
+					<img src="assets/ico/treasureColor.png">
+				</a>
+				<p>This item contains 10 tokens and a Point Booster!</p>
+				<div id="gameShopPopup_comingSoon"><div>COMING SOON</div></div>
+			
+			<div id="gameShopPopup_Fix">
+				<hr>
+				<form id="gameShop_form">
+					Redeem Promo Code: <input id="gamePromoTextField" type="text" name="promoCode" placeholder="xxxx"><br>
+					<a href="#" id="gamePromoCode_submit">Submit</a>
+				</form>
+			</div>
+			
+			
+			
+						
+		</div>
+	</div>
+	<!--GAME SHOP POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="gamePubPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<div data-role="header">
+				<h1 id="gamePubPopup_header">Welcome</h1>
+			</div>
+			<div role="main" class="ui-content newsletterPopupMain">
+				<img id="gamePubPopup_img" src="assets/ico/gameSpinLogo.png">
+				<div>
+					<hr>
+					<h3>Play for a chance to find a hint and points!</h3>
+					<div>
+						<button id="gamePubPopup_setSailButton">Play</button>
+						<h4 id="gamePubPopup_hints"></h4>
+					</div>
+					<div>
+						<h4 id="gamePubPopup_tokenTitle">Tokens: <span id="gamePubPopup_tokens">I'm a token</span></h4>
+						<h4 id="gamePubPopup_points">Points: <span>7</span></h4>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	<!--GAME PLAY PUB POPUP - Gabriel Periotto-->
+
+	<div data-role="popup" id="bookingPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Booking</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<p>
+				As a reward you receive a pirate chest. Do you want to
+				<a id="signInPopupBooking" href="#signUp_page">Sign Up </a> for our game to use it?
+			</p>
+			<div align="center">
+				<a href="#signUp_page">
+					<input type="button" id="pupupYesB" value="Yes" />
+				</a>
+				<a href="#home_page">
+					<input type="button" id="pupupNoB" value="No" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!--BOOKING POPUP - Ioan Ghisoi-->
+
+	<div data-role="popup" id="forgetPopup" data-overlay-theme="b" data-dismissible="true"> <a href="#" data-rel="back" class=" ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div data-role="header">
+			<h1>Recover Password</h1>
+		</div>
+		<div role="main" class="ui-content newsletterPopupMain">
+			<form id="forgetPassword">
+				<input type="email" name="forgetEmail" id="forgetEmailField" placeholder="Email Address" value="">
+				<p class="newsletterTextFieldValidation">&nbsp;</p>
+				<input class="forgetButton" type="submit" value="Recover">
+			</form>
+			<p>Please enter the email you wish to receive the password reset to.</p>
+		</div>
+	</div>
+	<!--FORGET PASSWORD POPUP - Ioan Ghisoi-->
+
+
+	<!--DEPENDENCIES-->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/myScript.js"></script>
+	<script type="text/javascript" src="assets/js/gameScript.js"></script>
+	<script src="assets/js/list.min.js"></script>
+</body>
+
+</html>
